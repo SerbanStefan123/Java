@@ -7,12 +7,14 @@ public class Main
 	    n = n + 0b10101;
         n = n + 0xFF;
         n = n * 6;
-        int result = 0;
-        while(n>0){
-            result = result + n%10;
+        while(n > 9){
+            int suma=0;
+            while(n > 0){
+            suma = suma + n%10;
             n=n/10;
+            }
+            n=suma;
         }
-        result = result%10;
-	    System.out.println("Willy-nilly, this semester I will learn " + languages[result]);
+	    System.out.println("Willy-nilly, this semester I will learn " + languages[n]);
 	}
 }
